@@ -20,3 +20,13 @@ body {
     height: 200px;
 }
 
+.new{
+           max-width: 800px;
+    margin: 0 auto;
+    color: #ff8300;
+    font-family: fantasy;
+    padding-top: 20;
+    justify-content: center;
+    padding-left: 80;
+    padding-right: 60;
+    }
