@@ -25,13 +25,13 @@ var createTemplate=function(data){
         var htmltemplate=`
         <html>
         <head> 
-        <title>$(title)</title>
+        <title>${title}</title>
          <link href="/ui/style.css" rel="stylesheet" />
         </head>
         
         <body>
             <div class="new">
-        <h1>$(heading) </h1>
+        <h1>${heading} </h1>
         <div>
         <a href="/">home</a>
         </div>
@@ -39,7 +39,7 @@ var createTemplate=function(data){
         <div >
             
                 <h3>intro</h3>
-           $(content)
+           ${content}
         </div>
         </div>
         </body>
