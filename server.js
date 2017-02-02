@@ -2,6 +2,51 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
+var article1={
+    title: 'article 1',
+    heading: 'hi',
+    content:` <p>
+        hi i'm abhishek
+    </p>    
+    <p>
+        hi i'm abhishek
+    </p>
+    <p>
+        hi i'm abhishek
+    </p>`
+    
+    
+    
+};
+var createTemplate=function(data){
+        var content=data.content;
+        var title=data.title;
+        var heading=data.heading;
+        var htmltemplate=`
+        <html>
+        <head> 
+        <title>$(title)</title>
+         <link href="/ui/style.css" rel="stylesheet" />
+        </head>
+        
+        <body>
+            <div class="new">
+        <h1>$(heading) </h1>
+        <div>
+        <a href="/">home</a>
+        </div>
+        <hr/>
+        <div >
+            
+                <h3>intro</h3>
+           $(content)
+        </div>
+        </div>
+        </body>
+        
+        </html>`;
+return htmltemplate;
+};
 var app = express();
 app.use(morgan('combined'));
 
@@ -9,7 +54,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/article1',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article1.html'));
+   res.send(createTemplate(article1));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
