@@ -5,8 +5,8 @@ element.innerHTML="qert";
 var pic=document.getElementById('er');
 marginLeft=0;
 var moveRight=function(){
-  var marginLeft=marginLeft+15;
-  pic.style.marginLeft=marginLeft+'px';
+  var marginLeft=marginLeft + 15;
+  pic.style.marginLeft=marginLeft + 'px';
 };
 pic.onclick=function(){
   var interval=setInterval(moveRight,50);  
