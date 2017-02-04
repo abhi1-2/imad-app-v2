@@ -4,7 +4,7 @@ element.innerHTML="qert";
 var pic=document.getElementById('er');
 marginLeft=0;
 var moveright=function(){
-   marginLeft=marginLeft + 15;
+   marginLeft=marginLeft + 10;
   pic.style.marginLeft=marginLeft + 'px';
 };
 pic.onclick=function(){
