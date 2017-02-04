@@ -6,7 +6,7 @@ var pic=document.getElementById('er');
 marginLeft=0;
 var moveRight=function(){
   var marginLeft=marginLeft+15;
-  pic.style.marginleft=marginleft+'px';
+  pic.style.marginLeft=marginLeft+'px';
 };
 pic.onclick=function(){
   var imt=setInterval(moveRight,50);  
